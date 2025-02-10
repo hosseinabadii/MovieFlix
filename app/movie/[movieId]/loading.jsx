@@ -1,8 +1,8 @@
 export default function Loading() {
   return (
-    <div className="w-full max-w-7xl mx-auto mt-8 p-4 md:p-8 bg-dark-100 shadow-inner shadow-light-100/10 animate-pulse">
+    <div className="w-full max-w-7xl mx-auto mt-8 sm:p-4 md:p-8 bg-dark-100 shadow-inner shadow-light-100/10 animate-pulse">
       {/* Title Section */}
-      <div className="text-center mb-8">
+      <div className="text-center my-8">
         <div className="h-16 w-64 bg-light-100/20 mx-auto rounded"></div>
         <div className="h-10 w-40 bg-light-100/10 mx-auto mt-4 rounded"></div>
       </div>

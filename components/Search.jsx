@@ -21,7 +21,7 @@ export default function Search() {
   }, 1000);
 
   return (
-    <div className="text-white text-2xl">
+    <div className="text-white text-sm sm:text-lg px-4">
       <div id="search" className="search">
         <div>
           <Image src="/search.svg" alt="Search Icon" width="24" height="24" />
@@ -30,6 +30,7 @@ export default function Search() {
             placeholder="Search through thousands of movies"
             onChange={(e) => handleSearch(e.target.value)}
             defaultValue={searchParams.get("query")?.toString()}
+            className="text-sm sm:text-lg"
           />
         </div>
       </div>

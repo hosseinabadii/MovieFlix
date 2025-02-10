@@ -9,7 +9,9 @@ export default async function AllMovies({ query, currentPage }) {
 
   return (
     <section id="all-movies" className="all-movies">
-      <h2>{query ? `Results found for "${query}"` : "All Movies"}</h2>
+      <h2 className="px-4 sm:px-0">
+        {query ? `Results found for "${query}"` : "All Movies"}
+      </h2>
       {movies ? (
         <>
           {movies.length > 0 ? (
@@ -19,14 +21,14 @@ export default async function AllMovies({ query, currentPage }) {
               ))}
             </ul>
           ) : (
-            <div className="flex items-center justify-center h-20">
-              <p className="text-yellow-500 text-2xl">No movies found.</p>
+            <div className="no-movies-container">
+              <p className="warning">No movies found.</p>
             </div>
           )}
         </>
       ) : (
-        <div className="flex items-center justify-center h-20">
-          <p className="text-red-500 text-2xl">Failed to fetch movies.</p>
+        <div className="no-movies-container">
+          <p className="error">Failed to fetch movies.</p>
         </div>
       )}
 

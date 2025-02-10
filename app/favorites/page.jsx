@@ -27,7 +27,7 @@ export default function FavoritesPage() {
           </ul>
         </>
       ) : (
-        <div className="h-[400px] flex flex-col gap-6 text-2xl items-center justify-center">
+        <div className="h-[400px] flex flex-col gap-6 text-2xl items-center justify-center px-4 sm:px-6">
           <p className="text-red-500">No Favorite Movies Yet</p>
           <p className="text-gray-100">
             Add some movies to your favorites and they will apear here.

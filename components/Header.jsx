@@ -13,6 +13,9 @@ export default function SiteHeader() {
       <h1>
         Find <span className="text-gradient">Movies</span> and Enjoy
       </h1>
+      <p className="text-gray-300 text-center mt-2">
+        Login and add the movies to your favorites.
+      </p>
     </header>
   );
 }

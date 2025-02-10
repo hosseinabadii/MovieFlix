@@ -28,18 +28,14 @@ export default async function TrendingMoviesList({ movies }) {
               ))}
             </ul>
           ) : (
-            <div className="h-60 flex items-center justify-center">
-              <p className="text-yellow-500 text-2xl">
-                No trending movies found.
-              </p>
+            <div className="no-movies-container">
+              <p className="warning">No trending movies found.</p>
             </div>
           )}
         </>
       ) : (
-        <div className="h-60 flex items-center justify-center">
-          <p className="text-red-500 text-2xl">
-            Failed to fetch trending movies.
-          </p>
+        <div className="no-movies-container">
+          <p className="error">Failed to fetch trending movies.</p>
         </div>
       )}
     </>

@@ -8,9 +8,9 @@ export default async function MovieDetailsPage({ params }) {
   const movie = await getMovieDetails(movieId);
 
   return (
-    <div className="max-w-7xl mx-auto mt-8 p-4 md:p-8 bg-dark-100 shadow-inner shadow-light-100/10">
+    <div className="max-w-7xl mx-auto mt-8 sm:p-4 bg-dark-100 shadow-inner shadow-light-100/10">
       {/* Title Section */}
-      <div className="text-center mb-8">
+      <div className="text-center my-8">
         <h1 className="text-4xl font-bold text-white">{movie.title}</h1>
         <p className="text-lg text-light-200 mt-2 italic">
           Released: {movie.release_date}
@@ -18,7 +18,7 @@ export default async function MovieDetailsPage({ params }) {
       </div>
 
       {/* Movie Info Section */}
-      <div className="flex flex-col md:flex-row md:space-x-8 bg-primary rounded-2xl shadow-md p-6">
+      <div className="flex flex-col md:flex-row md:space-x-8 bg-primary sm:rounded-2xl shadow-md p-4 sm:p-6">
         {/* Poster Image */}
         <div className="w-full md:w-1/2 lg:w-1/3 text-center mb-4 lg:mb-0">
           <div className="movie-card">
@@ -67,12 +67,12 @@ export default async function MovieDetailsPage({ params }) {
       <div className="mt-8 space-y-8">
         <div className="flex flex-col gap-4 md:flex-row md:justify-between md:gap-8">
           {/* Ratings Section */}
-          <div className="w-full md:w-1/3 bg-dark-100 shadow-inner shadow-light-100/10 p-6">
+          <div className="w-full md:w-1/3 bg-dark-100 shadow-inner shadow-light-100/10 p-4 sm:p-6">
             <h2 className="text-3xl font-bold text-white mb-4">Ratings</h2>
             <ul className="space-y-2 text-light-200">
               <li>
                 <span className="font-bold text-light-100">Vote Average:</span>{" "}
-                {movie.vote_average}
+                {Number(movie.vote_average).toFixed(1)}
               </li>
               <li>
                 <span className="font-bold text-light-100">Vote Count:</span>{" "}
@@ -82,7 +82,7 @@ export default async function MovieDetailsPage({ params }) {
           </div>
 
           {/* Genres Section */}
-          <div className="w-full md:w-1/3 bg-dark-100 shadow-inner shadow-light-100/10 p-6">
+          <div className="w-full md:w-1/3 bg-dark-100 shadow-inner shadow-light-100/10 p-4 sm:p-6">
             <h2 className="text-3xl font-bold text-white mb-4">Genres</h2>
             <div className="flex flex-wrap gap-2">
               {movie.genres.map((genre) => (
@@ -97,7 +97,7 @@ export default async function MovieDetailsPage({ params }) {
           </div>
 
           {/* Production Countries Section */}
-          <div className="w-full md:w-1/3 bg-dark-100 shadow-inner shadow-light-100/10 p-6">
+          <div className="w-full md:w-1/3 bg-dark-100 shadow-inner shadow-light-100/10 p-4 sm:p-6">
             <h2 className="text-3xl font-bold text-white mb-4">
               Production Countries
             </h2>
@@ -110,7 +110,7 @@ export default async function MovieDetailsPage({ params }) {
         </div>
 
         {/* Production Companies Section */}
-        <div className="bg-dark-100 shadow-inner shadow-light-100/10 p-6">
+        <div className="bg-dark-100 shadow-inner shadow-light-100/10 p-4 sm:p-6">
           <h2 className="text-3xl font-bold text-white mb-4">
             Production Companies
           </h2>

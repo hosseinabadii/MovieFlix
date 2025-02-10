@@ -19,7 +19,7 @@ export default async function Home(props) {
       <section className="trending">
         <h2>Trending Movies on TMDB</h2>
         <Suspense fallback={<TrendingSkeleton />}>
-          <TrendingMoviesTMDB />;
+          <TrendingMoviesTMDB />
         </Suspense>
       </section>
 
